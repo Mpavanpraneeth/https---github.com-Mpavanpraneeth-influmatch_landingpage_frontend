@@ -1,0 +1,177 @@
+/* Root theme variables */
+:root {
+  --gradient-hero: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  --gradient-accent: linear-gradient(135deg, #ff6a00 0%, #ee0979 100%);
+  --gradient-card: linear-gradient(135deg, #43cea2 0%, #185a9d 100%);
+  --color-bg: #f9fafb;
+  --color-text: #1f2937;
+  --color-muted: #6b7280;
+  --radius: 12px;
+  --transition: all 0.3s ease;
+}
+
+/* Global reset */
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+/* Hero section */
+section.hero {
+  background: var(--gradient-hero);
+  color: white;
+  padding: 6rem 2rem;
+  text-align: center;
+  animation: fadeIn 1s ease-out;
+}
+
+section.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  animation: slideUp 0.8s ease-out;
+}
+
+section.hero p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  animation: slideUp 1s ease-out;
+}
+
+/* Buttons */
+button,
+a.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  font-weight: 500;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+button.primary,
+a.button.primary {
+  background: var(--gradient-accent);
+  color: white;
+  border: none;
+}
+
+button.primary:hover,
+a.button.primary:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+button.secondary,
+a.button.secondary {
+  background: white;
+  color: var(--color-text);
+  border: 1px solid #e5e7eb;
+}
+
+button.secondary:hover,
+a.button.secondary:hover {
+  background: #f3f4f6;
+}
+
+/* Influencer cards */
+.card {
+  background: white;
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Gradient card header */
+.card-header {
+  background: var(--gradient-card);
+  color: white;
+  padding: 1rem;
+  border-radius: var(--radius) var(--radius) 0 0;
+  font-weight: 600;
+}
+
+/* Coming soon form */
+form.waitlist {
+  background: white;
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 1s ease-out;
+}
+
+form.waitlist input,
+form.waitlist select {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: var(--radius);
+  border: 1px solid #d1d5db;
+  margin-bottom: 1rem;
+  transition: var(--transition);
+}
+
+form.waitlist input:focus,
+form.waitlist select:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Footer */
+footer {
+  background: #111827;
+  color: #9ca3af;
+  padding: 2rem;
+  text-align: center;
+}
+
+footer a {
+  color: #f9fafb;
+  margin: 0 0.5rem;
+  transition: var(--transition);
+}
+
+footer a:hover {
+  color: #6366f1;
+}
